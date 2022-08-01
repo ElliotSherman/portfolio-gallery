@@ -9,3 +9,5 @@ $('.navbar-nav').html(getStrNavLis())
 $('[data-services="services-container"]').html(getStrDescs())
 // render portfolio gallery links
 $('[data-portfolio-cards="data-portfolio-cards"]').html(getStrPortfolioCards())
+// append models after footer
+$('footer').after(getStrProjectModals())
