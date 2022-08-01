@@ -40,17 +40,17 @@ function getStrPortfolioCards() {
     var projects = getProjects()
     return projects.map(card => `        
     <div class="col-md-4 col-sm-6 portfolio-item">\n
-    \t<a class="portfolio-link" data-toggle="modal" onclick="onShowModal(${card.id})" href="#portfolioModal1">\n
+    \t<a class="portfolio-link" data-toggle="modal" onclick="onShowModal('${card.id}')" href="#portfolioModal1">\n
       \t<div class="portfolio-hover">\n
         \t<div class="portfolio-hover-content">\n
           \t<i class="fa fa-plus fa-3x"></i>\n
         \t</div>\n
       \t</div>\n
-      \t<img class="img-fluid" src="img/portfolio/${card.imgThumbnail}" alt="">\n
+      \t<img class="img-fluid" src="img/projectImgs/${card.id}.jpg" alt="">\n
     \t</a>\n
     \t<div class="portfolio-caption">\n
-      \t<h4>${card.title}</h4>\n
-      \t<p class="text-muted">${card.txt}</p>\n
+      \t<h4>${card.id}</h4>\n
+      \t<p class="text-muted">${card.title}</p>\n
     \t</div>\n
     </div>\n`).join('')
 }
@@ -62,16 +62,19 @@ function onShowModal(id) {
 }
 
 function renderModal(modal) {
-    return `<h2>${modal.projName}</h2>
-    <p class="item-intro text-muted">${modal.introTxt}</p>
-    <img class="img-fluid d-block mx-auto" src="img/portfolio/${modal.imgFull}" alt="">
+    return `<h2>${modal.id}</h2>
+    <p class="item-intro text-muted">${modal.title}</p>
+    <img class="img-fluid d-block mx-auto" src="img/projectImgs/${modal.id}.jpg" alt="">
     <p>${modal.desc}</p>
     <ul class="list-inline">
       <li>Date: ${modal.date}</li>
-      <li>Client: ${modal.client}</li>
-      <li>Category: ${modal.category}</li>
     </ul>
-    <button class="btn btn-primary" data-dismiss="modal" type="button">
+    <div class='my-3'><a class="btn btn-primary" data-dismiss="modal" type="button">
+      <i class="fa fa-check"></i>
+      CHeck Out The Deployment</a>
+      </div>
+    <div><button class="btn btn-primary btn-info" data-dismiss="modal" type="button">
       <i class="fa fa-times"></i>
-      Close Project</button>`
+      Close Modal</button>
+      </div>`
 }
