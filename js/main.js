@@ -20,7 +20,7 @@ function renderElements() {
 function getStrNavLis() {
   var navLinks = getNavLinks()
   return navLinks.map(li => `<li class="nav-item">\n 
-    \t<a class="nav-link js-scroll-trigger" href="${li.href}">${li.txt}</a>\n</li> \n
+    \t<a ${li.onClick} class="nav-link js-scroll-trigger" href="${li.href}">${li.txt}</a>\n</li> \n
 `).join('')
 }
 
@@ -49,7 +49,7 @@ function getStrPortfolioCards() {
       \t<img class="img-fluid" src="img/projectImgs/${card.id}.JPG" alt="">\n
     \t</a>\n
     \t<div class="portfolio-caption">\n
-      \t<h4>${card.id}</h4>\n
+      \t<h4>${card.name}</h4>\n
       \t<p class="text-muted">${card.title}</p>\n
     \t</div>\n
     </div>\n`).join('')
@@ -62,7 +62,7 @@ function onShowModal(id) {
 }
 
 function renderModal(modal) {
-  return `<h2>${modal.id}</h2>
+  return `<h2>${modal.name}</h2>
     <p class="item-intro text-muted">${modal.title}</p>
     <img class="img-fluid d-block mx-auto" src="img/projectImgs/${modal.id}.JPG" alt="">
     <p>${modal.desc}</p>
