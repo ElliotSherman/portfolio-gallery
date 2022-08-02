@@ -46,7 +46,7 @@ function getStrPortfolioCards() {
           \t<i class="fa fa-plus fa-3x"></i>\n
         \t</div>\n
       \t</div>\n
-      \t<img class="img-fluid" src="img/projectImgs/${card.id}.jpg" alt="">\n
+      \t<img class="img-fluid" src="img/projectImgs/${card.id}.JPG" alt="">\n
     \t</a>\n
     \t<div class="portfolio-caption">\n
       \t<h4>${card.id}</h4>\n
