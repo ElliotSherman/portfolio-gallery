@@ -69,9 +69,9 @@ function renderModal(modal) {
     <ul class="list-inline">
       <li>Date: ${modal.date}</li>
     </ul>
-    <div class='my-3'><a class="btn btn-primary" data-dismiss="modal" type="button">
+    <div class='my-3'><a href="${modal.url}" target="_blank" class="btn btn-primary" type="button">
       <i class="fa fa-check"></i>
-      CHeck Out The Deployment</a>
+      Check Out The Deployment</a>
       </div>
     <div><button class="btn btn-primary btn-info" data-dismiss="modal" type="button">
       <i class="fa fa-times"></i>
