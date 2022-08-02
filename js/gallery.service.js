@@ -3,7 +3,7 @@ console.log('Starting up service');
 
 
 const gNavLis = [
-  { txt: 'Specialities', href: '#services' },
+  { txt: 'Qualities', href: '#services' },
   { txt: 'Portfolio', href: '#portfolio' },
   { txt: 'Me', href: '#me' },
   { txt: 'Contact', href: '#contact' },
@@ -38,9 +38,9 @@ const gProjects = [{
 ]
 
 const specialitiesDescriptions = [
-  { title: 'E-Commerce', desc: LOREM_STR },
-  { title: 'Responsive Design', desc: LOREM_STR },
-  { title: 'Web Security', desc: LOREM_STR }
+  { title: 'Self Motivated', desc: 'I love to push myself to the edge, I work hard and take my goals seriousley' ,icon:'fa-paper-plane' },
+  { title: 'Creative', desc: 'Creativity and Imagination is a passion but also an important tool in design ' ,icon:' fa-pencil' },
+  { title: 'Problem Solver', desc: 'There is no problem that doesn\'t have a solution, I won\'t give up until I find a solution to your problem' ,icon:' fa-wrench' }
 ]
 
 function getSpecialitiesDescriptions() {

@@ -29,7 +29,7 @@ function getStrDescs() {
   return specialitiesDescriptions.map(desc => ` <div class="col-md-4">\n
     \t<span class="fa-stack fa-4x">\n
       \t<i class="fa fa-circle fa-stack-2x text-primary"></i>\n
-      \t<i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>\n
+      \t<i class="fa ${desc.icon} fa-stack-1x fa-inverse"></i>\n
     \t</span>\n
     \t<h4 class="service-heading">${desc.title}</h4>\n
     \t<p class="text-muted">${desc.desc}</p>\n
