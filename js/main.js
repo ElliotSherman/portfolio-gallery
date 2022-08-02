@@ -64,7 +64,7 @@ function onShowModal(id) {
 function renderModal(modal) {
   return `<h2>${modal.id}</h2>
     <p class="item-intro text-muted">${modal.title}</p>
-    <img class="img-fluid d-block mx-auto" src="img/projectImgs/${modal.id}.jpg" alt="">
+    <img class="img-fluid d-block mx-auto" src="img/projectImgs/${modal.id}.JPG" alt="">
     <p>${modal.desc}</p>
     <ul class="list-inline">
       <li>Date: ${modal.date}</li>
