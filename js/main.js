@@ -4,29 +4,29 @@ console.log('Starting up controller');
 $(onInit)
 
 function onInit() {
-    renderElements()
+  renderElements()
 }
 
 function renderElements() {
-    // render nav links
-    $('.navbar-nav').html(getStrNavLis())
-    // render service descs
-    $('[data-services="services-container"]').html(getStrDescs())
-    // render portfolio gallery links
-    $('[data-portfolio-cards="data-portfolio-cards"]').html(getStrPortfolioCards())
-    // append models after footer
+  // render nav links
+  $('.navbar-nav').html(getStrNavLis())
+  // render service descs
+  $('[data-services="services-container"]').html(getStrDescs())
+  // render portfolio gallery links
+  $('[data-portfolio-cards="data-portfolio-cards"]').html(getStrPortfolioCards())
+  // append models after footer
 }
 
 function getStrNavLis() {
-    var navLinks = getNavLinks()
-    return navLinks.map(li => `<li class="nav-item">\n 
+  var navLinks = getNavLinks()
+  return navLinks.map(li => `<li class="nav-item">\n 
     \t<a class="nav-link js-scroll-trigger" href="${li.href}">${li.txt}</a>\n</li> \n
 `).join('')
 }
 
 function getStrDescs() {
-    var specialitiesDescriptions = getSpecialitiesDescriptions()
-    return specialitiesDescriptions.map(desc => ` <div class="col-md-4">\n
+  var specialitiesDescriptions = getSpecialitiesDescriptions()
+  return specialitiesDescriptions.map(desc => ` <div class="col-md-4">\n
     \t<span class="fa-stack fa-4x">\n
       \t<i class="fa fa-circle fa-stack-2x text-primary"></i>\n
       \t<i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>\n
@@ -37,8 +37,8 @@ function getStrDescs() {
 }
 
 function getStrPortfolioCards() {
-    var projects = getProjects()
-    return projects.map(card => `        
+  var projects = getProjects()
+  return projects.map(card => `        
     <div class="col-md-4 col-sm-6 portfolio-item">\n
     \t<a class="portfolio-link" data-toggle="modal" onclick="onShowModal('${card.id}')" href="#portfolioModal1">\n
       \t<div class="portfolio-hover">\n
@@ -46,7 +46,7 @@ function getStrPortfolioCards() {
           \t<i class="fa fa-plus fa-3x"></i>\n
         \t</div>\n
       \t</div>\n
-      \t<img class="img-fluid" src="img/projectImgs/${card.id}.jpg" alt="">\n
+      \t<img class="img-fluid" src="img/projectImgs/${card.id}.JPG" alt="">\n
     \t</a>\n
     \t<div class="portfolio-caption">\n
       \t<h4>${card.id}</h4>\n
@@ -56,13 +56,13 @@ function getStrPortfolioCards() {
 }
 
 function onShowModal(id) {
-    const modal = getProjectById(id)[0]
-    console.log(renderModal(modal));
-    $('.modal-body').html(renderModal(modal))
+  const modal = getProjectById(id)[0]
+  console.log(renderModal(modal));
+  $('.modal-body').html(renderModal(modal))
 }
 
 function renderModal(modal) {
-    return `<h2>${modal.id}</h2>
+  return `<h2>${modal.id}</h2>
     <p class="item-intro text-muted">${modal.title}</p>
     <img class="img-fluid d-block mx-auto" src="img/projectImgs/${modal.id}.JPG" alt="">
     <p>${modal.desc}</p>
